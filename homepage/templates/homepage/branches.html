@@ -1,0 +1,11 @@
+{% extends "homepage/base.html" %}
+{% block content %}
+    {% for branch in branches %}
+        <h1>{{  branch.city }}</h1><br>
+        <p>We are serving since {{ branch.since }}</p>
+        <p>Supervisor: {{ branch.supervisor }}</p>
+        <p>Contact: {{ branch.contactNumber }}</p>
+        <p>Area: {{ branch.area }}</p>
+        <p>Address: {{ branch.address }}</p>
+    {% endfor %}
+{% endblock content %}
