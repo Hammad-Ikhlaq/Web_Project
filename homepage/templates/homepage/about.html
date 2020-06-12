@@ -1,4 +1,92 @@
 {% extends "homepage/base.html" %}
 {% block content %}
-    <h1>About Page</h1>
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'homepage/homepage.css' %}">
+<div style="background-color: wheat">
+<hr class="featurette-divider">
+    <br><h1 style="margin-left: 13%; font-weight: bold; font-family: Gabriola">Vision</h1><br>
+
+    <div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<ul>
+<li>To be the largest fresh foods brand in the region</li>
+            </ul>
+
+		</div>
+	</div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+            <hr class="featurette-divider">
+    <br><h1 style="margin-left: 13%; font-weight: bold; font-family: Gabriola">Mission</h1><br>
+
+    <div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<ul>
+<li>MilkyWay is in the business of fulfilling customer needs related to healthy well-being by offering quality food products by efficiently utilizing state of the art technology & human resource in a way that creates value for stakeholders & for the farming community of Pakistan.</li>
+            </ul>
+
+		</div>
+	</div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+        <hr class="featurette-divider">
+<br><h1 style="margin-left: 13%; font-weight: bold; font-family: Gabriola" >Why MilkyWay?</h1><br>
+
+    <div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<ul>
+<li>Homogenized for smooth creamy thickness in each sip</li>
+<li>Naturally fortified with vitamins and minerals like calcium, protein and iron</li>
+<li>Our own farm milk of Australian Holstein Friesian Cows</li>
+<li>Milk is pasteurized within 4-5 Hours of milking</li>
+<li>Fully Automated System ensuring international hygiene standards</li>
+<li>Hormones &amp; Antibiotic Free Milk</li>
+<li>No Additives &amp; Preservatives</li>
+<li>HALAL Certified</li>
+<li>Packaged in special Food Grade HDPE Bottles</li>
+</ul>
+
+		</div>
+	</div>
+    </div>
+    </div>
+    </div>
+    </div>
+<!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+    <hr class="featurette-divider">
+<br><br><br>
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><img width="40%" height="40%" src="{% static 'homepage/images/Majid.PNG' %}" style="border-radius: 250px"></svg>
+        <h2>CEO Majid Bhatti</h2>
+        <p>MilkyWay is a solution for all Lahories who are desperate to find 110% pure , fresh and healthy milk to bring home which is free from all additives, preservatives and hormone injections. It caters the most important issue of hygiene which unfortunately is no where to be seen in local milk providers.</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><img width="40%" height="40%" src="{% static 'homepage/images/Hammad.jpg' %}" style="border-radius: 250px"></svg>
+        <h2>COO Hammad Ikhlaq</h2>
+        <p>To deliver 110% pure milk to our valuable customers, MilkyWay is protected in sterilized packaging free from all pollutants. We deliver this freshly extracted milk at your doorstep. Straight from our farms, no stopovers!</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><img width="40%" height="40%" src="{% static 'homepage/images/Fakhar.jpg' %}" style="border-radius: 250px"></svg>
+        <h2>CFO Fakhar E Alam</h2>
+        <p>MilkyWay is the best choice for every PAkistani. Currently we have started our operations in Okara andLahore only and soon would be expanding to other cities of the country.</p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+  </div>
+</div>
 {% endblock content %}

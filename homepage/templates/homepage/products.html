@@ -1,13 +1,44 @@
 {% extends "homepage/base.html" %}
-
+{% load static %}
 {% block content %}
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="For example: milk" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form><br><br>
-    {% for product in products %}
-        <h1>{{  product.name }}</h1><br>
-        <p>We are serving since {{ product.price }}</p>
-        <p>Supervisor: {{ product.quantity }}</p>
-    {% endfor %}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" media="(max-width:700px)" href="{% static 'homepage/small.css' %}">
+    <link rel="stylesheet" media="(min-width:701px)" href="{% static 'homepage/large.css' %}">
+    <script src="js.js"></script>
+
+<div >
+        {% for product in products %}
+          <div class="gallery">
+            <a target="_blank">
+              <img src=" {{ product.image_url}} " alt="Cinque Terre" width="600" height="400">
+                <button id="{{ product.name}}" class="text" style="width: 100%" onclick="loadDoc(this.id)">Add to Cart</button>
+            </a>
+            <div class="desc">{{ product.name}}</div>
+            <div class="price">Rs {{ product.price}}<br> Quantity:  <input type="number" id="myNumber" style="width: 70px" min="0">   </div>
+          </div>
+        {% endfor %}
+ </div>
+
+    <script>
+function loadDoc(label) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById(label).innerHTML =
+      this.responseText;
+    }
+    else
+    {
+        document.getElementById(label).innerHTML = 'Item has been added to cart'
+    }
+  };
+  xhttp.open("GET", "ajax_info.html", true);
+  xhttp.send();
+}
+</script>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 {% endblock content %}

@@ -1,4 +1,26 @@
 {% extends "homepage/base.html" %}
 {% block content %}
-    <h1>Feedback Page</h1>
+                    <br><br><a class="btn btn-outline-secondary" href="{% url 'post-create' %}">Want to give Review?</a>
+<br><br>
+    {% for post in posts %}
+
+        <br>
+        <article class="media content-section">
+          <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}" width="100px" height="100px" style="margin-right:50px">
+          <div class="media-body">
+            <div class="article-metadata">
+              <label class="mr-2" style="color: #42AEEC">{{ post.author }}</label>
+              <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+            </div>
+            <p class="article-content">{{ post.content }}</p>
+          </div>
+                        {% if post.author == user %}
+
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' post.id %}">Update</a>
+            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' post.id %}">Delete</a>
+                {% endif %}
+        </article>
+        <hr class="featurette-divider">
+    {% endfor %}
+    <br><br><br><br><br><br><br><br><br>
 {% endblock content %}

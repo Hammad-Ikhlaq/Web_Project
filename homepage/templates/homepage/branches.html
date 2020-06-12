@@ -1,11 +1,26 @@
 {% extends "homepage/base.html" %}
 {% block content %}
+
+
+
     {% for branch in branches %}
-        <h1>{{  branch.city }}</h1><br>
-        <p>We are serving since {{ branch.since }}</p>
-        <p>Supervisor: {{ branch.supervisor }}</p>
-        <p>Contact: {{ branch.contactNumber }}</p>
-        <p>Area: {{ branch.area }}</p>
-        <p>Address: {{ branch.address }}</p>
+        <div class="card">
+            <div class="card-header">
+                <h1 style="font-family: Gabriola; font-size: 100px">{{  branch.city }}</h1>
+            </div>
+        <blockquote class="blockquote mb-0" style="margin-left: 100px">
+            <div style="font-family: 'Sakkal Majalla'; font-size: 30px">
+            <p>We are serving since {{ branch.since }}</p>
+            <p>Supervisor: {{ branch.supervisor }}</p>
+            <p>Contact: {{ branch.contactNumber }}</p>
+            <p>Area: {{ branch.area }}</p>
+            <footer class="blockquote-footer">Address: {{ branch.address }}</footer>
+            </div>
+        </blockquote>
+        </div>
+
     {% endfor %}
+
+
+
 {% endblock content %}
